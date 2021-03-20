@@ -14,7 +14,7 @@ const Card = ({ list }) => {
       {list.map((item) => (
         <div key={item.id} className="p-2">
           <ProgressiveImage
-            delay={1000}
+            delay={500}
             src={item.img_src}
             className="object-cover h-full w-full"
             placeholder={Loading}
