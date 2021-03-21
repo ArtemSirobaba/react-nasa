@@ -1,10 +1,8 @@
 import { createStore, combineReducers } from "redux";
-import {
-  reducerRover,
-  reducerCamera,
-  reducerSol,
-  reducerToggle,
-} from "./reducer.js";
+import reducerRover from "./rover.js";
+import reducerCamera from "./camera.js";
+import reducerSol from "./sol.js";
+import reducerToggle from "./toggle.js";
 
 const allReducers = combineReducers({
   rover: reducerRover,

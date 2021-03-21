@@ -1,36 +1,9 @@
-const initialStateRover = {
-  rover: "Chose Rover",
-};
-
-export const reducerRover = (state = initialStateRover, action) => {
-  switch (action.type) {
-    case "CURIOSITY":
-      return {
-        rover: "Curiosity",
-      };
-    case "OPPORTUNITY":
-      return {
-        rover: "Opportunity",
-      };
-    case "SPIRIT":
-      return {
-        rover: "Spirit",
-      };
-    case "DEFAULTROVER":
-      return {
-        rover: "Chose Rover",
-      };
-    default:
-      return state;
-  }
-};
-
 const initialStateCamera = {
   camera: "Chose Camera",
   id: "",
 };
 
-export const reducerCamera = (state = initialStateCamera, action) => {
+const reducerCamera = (state = initialStateCamera, action) => {
   switch (action.type) {
     case "FHAZ":
       return {
@@ -92,40 +65,4 @@ export const reducerCamera = (state = initialStateCamera, action) => {
   }
 };
 
-const initialStateSol = {
-  sol: "",
-};
-
-export const reducerSol = (state = initialStateSol, action) => {
-  switch (action.type) {
-    case "NUMBER":
-      return {
-        sol: action.value,
-      };
-    case "DEFAULTNUMBER":
-      return {
-        sol: "",
-      };
-    default:
-      return state;
-  }
-};
-
-const initialStateToggle = {
-  open: false,
-};
-
-export const reducerToggle = (state = initialStateToggle, action) => {
-  switch (action.type) {
-    case "OPEN":
-      return {
-        open: true,
-      };
-    case "CLOSE":
-      return {
-        open: false,
-      };
-    default:
-      return state;
-  }
-};
+export default reducerCamera;
